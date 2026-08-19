@@ -1,0 +1,15 @@
+{
+	"version": "0.1.9d",
+	"spritesheet": "assets/tileset/overworld_tileset.png",
+	"baseSize": 16,
+	"textureName": "bush",
+	"properties": [
+		"spriteX", "spriteY", "x_offset", "y_offset", "delay", "baseSize"
+	],
+	"sprites": {
+		"bush_normal": [{"spriteX": 0, "spriteY": 1}],
+		"bush_sm": [{"spriteX": 1, "spriteY": 1}],
+		"bush_df": [{"spriteX": 2, "spriteY": 1}],
+		"bush_mp": [{"spriteX": 3, "spriteY": 1}],
+	}
+}

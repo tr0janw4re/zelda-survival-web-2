@@ -1,0 +1,14 @@
+{
+	"version": "0.1.9d",
+	"spritesheet": "assets/tileset/overworld_tileset.png",
+	"baseSize": 16,
+	"textureName": "sand"
+	"properties": [
+		"spriteX", "spriteY", "x_offset", "y_offset", "delay", "baseSize"
+	],
+	"sprites": {
+		"sand": {
+			"middle": [{"spriteX": 12, "spriteY": 0}],
+		}
+	}
+}

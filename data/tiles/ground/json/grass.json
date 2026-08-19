@@ -1,0 +1,55 @@
+{
+	"version": "0.1.9d",
+	"spritesheet": "assets/tileset/overworld_tileset.png",
+	"baseSize": 16,
+	"textureName": "grass",
+	"properties": [
+		"spriteX", "spriteY", "x_offset", "y_offset", "delay", "baseSize"
+	],
+	"sprites": {
+		"grass_normal": {
+			"middle": [{"spriteX": 1, "spriteY": 1}],
+			"top": [{"spriteX": 1, "spriteY": 0}],
+			"bottom": [{"spriteX": 1, "spriteY": 2}],
+			"left": [{"spriteX": 0, "spriteY": 1}],
+			"right": [{"spriteX": 2, "spriteY": 1}],
+			"cornerA": [{"spriteX": 0, "spriteY": 0}],
+			"cornerB": [{"spriteX": 2, "spriteY": 0}],
+			"cornerC": [{"spriteX": 0, "spriteY": 2}],
+			"cornerD": [{"spriteX": 2, "spriteY": 2}]
+		},
+		"grass_sm": {
+			"middle": [{"spriteX": 4, "spriteY": 1}],
+			"top": [{"spriteX": 4, "spriteY": 0}],
+			"bottom": [{"spriteX": 4, "spriteY": 2}],
+			"left": [{"spriteX": 3, "spriteY": 1}],
+			"right": [{"spriteX": 5, "spriteY": 1}],
+			"cornerA": [{"spriteX": 3, "spriteY": 0}],
+			"cornerB": [{"spriteX": 5, "spriteY": 0}],
+			"cornerC": [{"spriteX": 3, "spriteY": 2}],
+			"cornerD": [{"spriteX": 5, "spriteY": 2}]
+		},
+		"grass_df": {
+			"middle": [{"spriteX": 7, "spriteY": 1}],
+			"top": [{"spriteX": 7, "spriteY": 0}],
+			"bottom": [{"spriteX": 7, "spriteY": 2}],
+			"left": [{"spriteX": 6, "spriteY": 1}],
+			"right": [{"spriteX": 8, "spriteY": 1}],
+			"cornerA": [{"spriteX": 6, "spriteY": 0}],
+			"cornerB": [{"spriteX": 8, "spriteY": 0}],
+			"cornerC": [{"spriteX": 6, "spriteY": 2}],
+			"cornerD": [{"spriteX": 8, "spriteY": 2}]
+		},
+		"grass_mp": {
+			"middle": [{"spriteX": 10, "spriteY": 1}],
+			"top": [{"spriteX": 10, "spriteY": 0}],
+			"bottom": [{"spriteX": 10, "spriteY": 2}],
+			"left": [{"spriteX": 9, "spriteY": 1}],
+			"right": [{"spriteX": 11, "spriteY": 1}],
+			"cornerA": [{"spriteX": 9, "spriteY": 0}],
+			"cornerB": [{"spriteX": 11, "spriteY": 0}],
+			"cornerC": [{"spriteX": 9, "spriteY": 2}],
+			"cornerD": [{"spriteX": 11, "spriteY": 2}]
+		}
+	}
+}
