@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="assets/icon/linkIcon.ico" type="image/x-icon" />
+        <title>Zelda Survival - Launcher</title>
+        <style>
+            body {
+                margin: 0px;
+                padding: 0px;
+            }
+            #launcher-thing {
+                width: 100vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            #launcher-thing h2 {
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="launcher-thing">
+            <h2>Zelda Survival Launcher</h2>
+            <button id="launcher-play-button">Play</button>
+        </div>
+        <script>
+            class gameLaunch() {
+              constructor() {
+                this.gameWindow = null;
+                this.checkInterval = null;
+              }
+
+              launch() {
+                const winProp = {
+                  width : 640,
+                  height: 576
+                }
+                const left = (screen.width - winProp.width) / 2;
+                const top = (screen.height - winProp.height) / 2;
+
+                document.getElementById('launcher-play-button').disabled = true;
+
+                this.gameWindow = window.open(
+                  `zelda.html`,
+                  `ZeldaSurvival`,
+                )
+
+              }
+            }
+        </script>
+    </body>
+</html>
