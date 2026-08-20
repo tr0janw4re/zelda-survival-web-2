@@ -1,3 +1,34 @@
+class Draw {
+	constructor(ctx) {
+		this.ctx = ctx;
+	}
+
+	clear(x, y, width, height) {
+		this.ctx.clearRect(x, y, width, height);
+	}
+	
+	setColor(value) {
+		this.ctx.fillStyle = value;
+		this.ctx.strokeStyle = value;
+	}
+
+	setAlpha(value) {
+		this.ctx.globalAlpha = value/255;
+	}
+	
+	rect(type, x1, y1, x2, y2) {
+		if (type==="fill") {
+			this.ctx.fillStyle = color;
+			this.ctx.fillRect(x1, y1, width, height);
+		} else if (type==="stroke") {
+			this.ctx.strokeStyle = color;
+			this.ctx.strokeRect(x1, y1, width, height);
+		}
+	}
+
+	line(color)
+}
+
 class GameProp {
 	constructor(width, height, scaleMult, baseSize, title) {
 		this.width = width; this.height = height; //game window scale
