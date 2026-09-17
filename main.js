@@ -19,15 +19,20 @@ game._update = function(deltaTime) {
 }
 
 game._draw = function(ctx) {
-	ctx.textBaseline = "top";
-	ctx.clearRect(0, 0, game.prop.width, game.prop.height);
-	ctx.fillStyle = "#ffffff";
-	ctx.fillRect(0, 0, game.prop.width, game.prop.height);
-	playerProp.draw(game, ctx);
-	ctx.font = "4px monospace";
-	ctx.fillStyle = "#000000";
-	ctx.fillText(`X: ${playerProp.x} Y: ${playerProp.y} sprName: ${playerProp.sprName}, state: ${playerProp.state} currAnim: ${playerProp.anim.currAnim}`,0,0); 
-	ctx.fillText(`frame: ${playerProp.anim.frame} delay: ${playerProp.anim.delay} timer: ${playerProp.anim.timer} maxFrame: ${playerProp.anim.maxFrame}`, 0,4);
+	game.draw.ctx.textBaseline = "top"; //delete this later goofy goober
+	game.draw.clear(0, 0, game.prop.width, game.prop.height);
+	game.draw.setColor("#ffffff");
+	game.draw.rect("fill", 0, 0, game.prop.width, game.prop.height);
+	playerProp.draw(game, game.draw.ctx);
+	game.draw.setFont("4px monospace");
+	game.draw.setColor("#000000");
+	game.draw.text(`X: ${playerProp.x} Y: ${playerProp.y} sprName: ${playerProp.sprName}, state: ${playerProp.state} currAnim: ${playerProp.anim.currAnim}`,0,0); 
+	game.draw.text(`frame: ${playerProp.anim.frame} delay: ${playerProp.anim.delay} timer: ${playerProp.anim.timer} maxFrame: ${playerProp.anim.maxFrame}`, 0,4);
+	game.draw.line({
+		list: [[0, 0],
+		[50, 10],
+		[120, 60]]
+	});
 }
 
 game._loop(performance.now());

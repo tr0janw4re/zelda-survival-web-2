@@ -1,9 +1,10 @@
 class Draw {
-	constructor(ctx) {
+	constructor(ctx, width, height) {
 		this.ctx = ctx;
+		this.width = width; this.height = height;
 	}
 
-	clear(x, y, width, height) {
+	clear(x=0, y=0, width=this.width, height=this.height) {
 		this.ctx.clearRect(x, y, width, height);
 	}
 	
@@ -15,18 +16,38 @@ class Draw {
 	setAlpha(value) {
 		this.ctx.globalAlpha = value/255;
 	}
+
+	setLineWidth(value) {
+		this.ctx.lineWidth = value;
+	}
 	
 	rect(type, x1, y1, x2, y2) {
 		if (type==="fill") {
-			this.ctx.fillStyle = color;
-			this.ctx.fillRect(x1, y1, width, height);
+			this.ctx.fillRect(x1, y1, x2, y2);
 		} else if (type==="stroke") {
-			this.ctx.strokeStyle = color;
-			this.ctx.strokeRect(x1, y1, width, height);
+			this.ctx.strokeRect(x1, y1, x2, y2);
 		}
 	}
 
-	line(color)
+	line({list=[]}) {
+		//pls add the stroke type pretty pls
+		if (list.length>0) {
+			this.ctx.moveTo(list[0][0], list[0][1]);
+			for (let i=0; i<list.length; i++) {
+				this.ctx.lineTo(list[i][0], list[i][1]);
+			}
+			this.ctx.stroke();
+		}
+	}
+
+	setFont(stringthing) {
+		//wow so smart attempt to add it
+		this.ctx.font = stringthing;
+	}
+
+	text(text, x=0, y=0) {
+		this.ctx.fillText(text, x, y);
+	}
 }
 
 class GameProp {
@@ -81,9 +102,10 @@ class Game {
 		this.gWindow.height = this.prop.height*this.prop.scaleMult;
 		
 		document.body.appendChild(this.gWindow);
-		this.ctx = this.gWindow.getContext("2d");
-		this.ctx.setTransform(this.prop.scaleMult, 0, 0, this.prop.scaleMult, 0, 0);
-		if (this.pixelPerf) this.ctx.imageSmoothingEnabled=false;
+		
+		this.draw = new Draw(this.gWindow.getContext("2d"), this.prop.width, this.prop.height);
+		this.draw.ctx.setTransform(this.prop.scaleMult, 0, 0, this.prop.scaleMult, 0, 0);
+		if (this.pixelPerf) this.draw.ctx.imageSmoothingEnabled=false;
 		console.log(this);
 	}
 	
