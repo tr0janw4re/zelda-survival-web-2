@@ -65,6 +65,10 @@ class GameProp {
 			verName: "Losing my Marbles!" //0.0.0-a.0 - x
 		}
 	}
+
+	returnFullVersion() {
+		
+	}
 }
 
 class DebugMode {
@@ -81,7 +85,8 @@ class Game {
 		scaleMult=1,
 		baseSize=16,
 		title="Zelda Survival",
-		pixelPerf=true
+		pixelPerf=true,
+		debug=false
 	}) {
 		if (width<=0 || height<=0 || scaleMult<=0) {
 			throw new Error(`The window scale properties need to be positive`);
@@ -91,6 +96,7 @@ class Game {
 		this.fps; this.deltaTime;
 		this.prop = new GameProp(width, height, scaleMult, baseSize);
 		this.gWindow; this.ctx; this.pixelPerf = pixelPerf;
+		this.debug = new DebugMode(debug);
 		this.stop = false;
 	}
 	
@@ -105,6 +111,9 @@ class Game {
 		
 		this.draw = new Draw(this.gWindow.getContext("2d"), this.prop.width, this.prop.height);
 		this.draw.ctx.setTransform(this.prop.scaleMult, 0, 0, this.prop.scaleMult, 0, 0);
+		if (this.debug.on) {
+			console.log("debug mode enabled");
+		}
 		if (this.pixelPerf) this.draw.ctx.imageSmoothingEnabled=false;
 		console.log(this);
 	}
@@ -127,6 +136,10 @@ class Game {
 		
 		this._update(this.deltaTime);
 		this._draw(this.ctx);
+		if (this.debug.on) {
+			this._debugUpdate(this.deltaTime);
+			this._debugDraw(this.ctx);
+		}
 		
 		requestAnimationFrame(() => this._loop());
 	}
@@ -134,6 +147,10 @@ class Game {
 	_update(deltaTime) {} //fill after creation
 	_draw(ctx) {} //fill after creation
 	_stop() {this.stop = true;} //uhhhhhhhhhh
+
+	_debugUpdate(deltaTime) {}
+	_debugDraw() {}
+
 	_resume() {
 		if (this.stop) {
 			this.stop = false;
@@ -151,5 +168,6 @@ export let debugMode = new DebugMode(true);
 export const game = new Game({
 	width: 160, 
 	height: 144, 
-	scaleMult: 4
+	scaleMult: 4,
+	debug: true
 }); 

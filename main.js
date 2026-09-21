@@ -26,13 +26,19 @@ game._draw = function(ctx) {
 	playerProp.draw(game, game.draw.ctx);
 	game.draw.setFont("4px monospace");
 	game.draw.setColor("#000000");
-	game.draw.text(`X: ${playerProp.x} Y: ${playerProp.y} sprName: ${playerProp.sprName}, state: ${playerProp.state} currAnim: ${playerProp.anim.currAnim}`,0,0); 
-	game.draw.text(`frame: ${playerProp.anim.frame} delay: ${playerProp.anim.delay} timer: ${playerProp.anim.timer} maxFrame: ${playerProp.anim.maxFrame}`, 0,4);
-	game.draw.line({
+	/* game.draw.line({
 		list: [[0, 0],
 		[50, 10],
 		[120, 60]]
-	});
+	}); */
+}
+
+game._debugUpdate = function(deltaTime){}
+
+game._debugDraw = function(ctx) {
+	game.draw.text(`${game.prop.gameTitle} - ${game.prop.version}`,0,0); 
+	game.draw.text(`X: ${playerProp.x} Y: ${playerProp.y} sprName: ${playerProp.sprName}, state: ${playerProp.state} currAnim: ${playerProp.anim.currAnim}`,0,4); 
+	game.draw.text(`frame: ${playerProp.anim.frame} delay: ${playerProp.anim.delay} timer: ${playerProp.anim.timer} maxFrame: ${playerProp.anim.maxFrame}`, 0,8);
 }
 
 game._loop(performance.now());
