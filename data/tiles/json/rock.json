@@ -1,0 +1,22 @@
+{
+	"version": "0.1.9d",
+	"spritesheet": "assets/tiles.png",
+	"baseSize": 16,
+	"textureName": "rock",
+	"properties": [
+		"spriteX", "spriteY", "x_offset", "y_offset", "delay", "baseSize"
+	],
+	"sprites": {
+		"rock_normal": {
+			"middle": [{"spriteX": 5, "spriteY": 1}],
+			"top": [{"spriteX": 5, "spriteY": 0}],
+			"bottom": [{"spriteX": 5, "spriteY": 2}],
+			"left": [{"spriteX": 4, "spriteY": 1}],
+			"right": [{"spriteX": 6, "spriteY": 1}],
+			"cornerA": [{"spriteX": 4, "spriteY": 0}],
+			"cornerB": [{"spriteX": 6, "spriteY": 0}],
+			"cornerC": [{"spriteX": 4, "spriteY": 2}],
+			"cornerD": [{"spriteX": 6, "spriteY": 2}]
+		}
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"version": "0.1.9d",
+	"spritesheet": "assets/missigno.png",
+	"baseSize": 16,
+	"textureName": "missigno",
+	"properties": [
+		"spriteX", "spriteY", "x_offset", "y_offset", "delay", "baseSize"
+	],
+	"sprites": {
+		"missigno": {
+			"middle": [{"spriteX": 0, "spriteY": 0}]
+		}
+	}
+}

@@ -3,6 +3,7 @@ import {
 } from "./engine.js";
 
 let directions = ["down", "right", "up", "left"];
+export let worldMap = [];
 
 class Camera {
 	constructor(x, y) {
@@ -17,7 +18,7 @@ class Camera {
 	}
 }
 
-class AnimationLoader {
+export class AnimationLoader {
 	constructor() {
 		this.animData = {};
 		this.animList = [];
@@ -270,4 +271,3 @@ export let playerProp = new Player({
 	game: game,
 	sprName: "player"
 });
-await playerProp.init(animLoader, playerProp.jsonPath, playerProp.sprName);

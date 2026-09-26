@@ -1,0 +1,33 @@
+{
+	"version": "0.1.9d",
+	"spritesheet": "assets/tiles.png",
+	"baseSize": 16,
+	"textureName": "grass",
+	"properties": [
+		"spriteX", "spriteY", "x_offset", "y_offset", "delay", "baseSize"
+	],
+	"sprites": {
+		"grass_normal": {
+			"middle": [{"spriteX": 1, "spriteY": 1}],
+			"top": [{"spriteX": 1, "spriteY": 0}],
+			"bottom": [{"spriteX": 1, "spriteY": 2}],
+			"left": [{"spriteX": 0, "spriteY": 1}],
+			"right": [{"spriteX": 2, "spriteY": 1}],
+			"cornerA": [{"spriteX": 0, "spriteY": 0}],
+			"cornerB": [{"spriteX": 2, "spriteY": 0}],
+			"cornerC": [{"spriteX": 0, "spriteY": 2}],
+			"cornerD": [{"spriteX": 2, "spriteY": 2}]
+		},
+		"grass_snowy": {
+			"middle": [{"spriteX": 11, "spriteY": 1}],
+			"top": [{"spriteX": 11, "spriteY": 0}],
+			"bottom": [{"spriteX": 11, "spriteY": 2}],
+			"left": [{"spriteX": 10, "spriteY": 1}],
+			"right": [{"spriteX": 12, "spriteY": 1}],
+			"cornerA": [{"spriteX": 10, "spriteY": 0}],
+			"cornerB": [{"spriteX": 12, "spriteY": 0}],
+			"cornerC": [{"spriteX": 10, "spriteY": 2}],
+			"cornerD": [{"spriteX": 12, "spriteY": 2}]
+		}
+	}
+}

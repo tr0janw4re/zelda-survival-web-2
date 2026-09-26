@@ -67,7 +67,7 @@ class GameProp {
 	}
 
 	returnFullVersion() {
-		
+		return `${this.version.major}.${this.version.minor}.${this.version.patch} - ${this.version.verName}`;
 	}
 }
 
