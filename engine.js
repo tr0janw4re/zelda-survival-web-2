@@ -74,6 +74,7 @@ class GameProp {
 class DebugMode {
 	constructor(on) {
 		this.on=on;
+		this.debugWorld=true;
 		//add here debug things
 	}
 }

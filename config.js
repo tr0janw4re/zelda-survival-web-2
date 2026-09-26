@@ -150,7 +150,7 @@ class Entity {
 				if (this.anim.frame+1>this.anim.maxFrame || animation[this.anim.frame+1]===undefined) {
 					if (animProp && !animProp.loop && animProp.nextAnim && checkAnimationExist(this.sprName, animProp.nextAnim)) {
 						this.anim.currAnim = animProp.nextAnim;
-						this.state = animProps.nextAnim;
+						this.state = animProp.nextAnim;
 					}
 					this.anim.frame = 0;
 				} else {

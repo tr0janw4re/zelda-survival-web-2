@@ -7,7 +7,7 @@
 		"spriteX", "spriteY", "x_offset", "y_offset", "delay", "baseSize"
 	],
 	"sprites": {
-		"missigno": {
+		"missigno_missigno": {
 			"middle": [{"spriteX": 0, "spriteY": 0}]
 		}
 	}

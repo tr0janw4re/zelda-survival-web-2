@@ -1,0 +1,27 @@
+{
+	"version": "0.1.9d",
+	"spritesheet": "assets/tiles.png",
+	"baseSize": 16,
+	"textureName": "flower",
+	"properties": [
+		"spriteX", "spriteY", "x_offset", "y_offset", "delay", "baseSize"
+	],
+	"sprites": {
+		"flower_normal": {
+			"middle": [
+				{"spriteX": 0, "spriteY": 3, "delay": 16},
+				{"spriteX": 1, "spriteY": 3, "delay": 16},
+				{"spriteX": 2, "spriteY": 3, "delay": 16},
+				{"spriteX": 3, "spriteY": 3, "delay": 16}
+			]
+		},
+		"flower_snowy": {
+			"middle": [
+				{"spriteX": 4, "spriteY": 3, "delay": 16},
+				{"spriteX": 5, "spriteY": 3, "delay": 16},
+				{"spriteX": 6, "spriteY": 3, "delay": 16},
+				{"spriteX": 7, "spriteY": 3, "delay": 16}
+			]
+		}
+	}
+}
