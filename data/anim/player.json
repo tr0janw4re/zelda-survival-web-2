@@ -1,146 +1,137 @@
 {
-	"version": "0.1.9e",
-	"spritesheet": "assets/linksprtest.png",
-	"baseSize": 16,
-	"properties": [
-		"spriteX",
-		"spriteY",
-		"x_offset",
-		"y_offset",
-		"delay",
-		"baseSize",
-		"flipX",
-		"flipY",
-		"scaleXMultiplier",
-		"scaleYMultiplier"
-	],
-	"animations": {
-		"normal_idle": {
-			"prop": {"loop": true},
-			"down": [{ "spriteX": 0, "spriteY": 0}],
-			"right": [{ "spriteX": 1, "spriteY": 0 }],
-			"up": [{ "spriteX": 2, "spriteY": 0 }],
-			"left": [{ "spriteX": 3, "spriteY": 0 }]
-		},
-		"normal_idle_shield": {
-			"prop": {"loop": true},
-			"down": [{ "spriteX": 0, "spriteY": 2 }],
-			"right": [{ "spriteX": 1, "spriteY": 2 }],
-			"up": [{ "spriteX": 2, "spriteY": 2 }],
-			"left": [{ "spriteX": 3, "spriteY": 2 }]
-		},
-		"water_idle": {
-			"prop": {"loop": true},
-			"down": [{ "spriteX": 4, "spriteY": 2 }],
-			"right": [{ "spriteX": 5, "spriteY": 2 }],
-			"up": [{ "spriteX": 6, "spriteY": 2 }],
-			"left": [{ "spriteX": 7, "spriteY": 2 }]
-		},
-		"defend_idle": {
-			"prop": {"loop": true},
-			"down": [{ "spriteX": 8, "spriteY": 0 }],
-			"right": [{ "spriteX": 9, "spriteY": 0 }],
-			"up": [{ "spriteX": 10, "spriteY": 0 }],
-			"left": [{ "spriteX": 11, "spriteY": 0 }]
-		},
-		"normal_walk": {
-			"prop": {"loop": true, "playUntilEnd": true},
-			"down": [
-				{ "spriteX": 0, "spriteY": 0, "delay": 8 },
-				{ "spriteX": 0, "spriteY": 1, "delay": 8 }
-			],
-			"right": [
-				{ "spriteX": 1, "spriteY": 0, "delay": 8 },
-				{ "spriteX": 1, "spriteY": 1, "delay": 8 }
-			],
-			"up": [
-				{ "spriteX": 2, "spriteY": 0, "delay": 8 },
-				{ "spriteX": 2, "spriteY": 1, "delay": 8 }
-			],
-			"left": [
-				{ "spriteX": 3, "spriteY": 0, "delay": 8 },
-				{ "spriteX": 3, "spriteY": 1, "delay": 8 }
-			]
-		},
-		"normal_walk_shield": {
-			"prop": {"loop": true, "playUntilEnd": true},
-			"down": [
-				{ "spriteX": 0, "spriteY": 2, "delay": 8 },
-				{ "spriteX": 0, "spriteY": 3, "delay": 8 }
-			],
-			"right": [
-				{ "spriteX": 1, "spriteY": 2, "delay": 8 },
-				{ "spriteX": 1, "spriteY": 3, "delay": 8 }
-			],
-			"up": [
-				{ "spriteX": 2, "spriteY": 2, "delay": 8 },
-				{ "spriteX": 2, "spriteY": 3, "delay": 8 }
-			],
-			"left": [
-				{ "spriteX": 3, "spriteY": 2, "delay": 8 },
-				{ "spriteX": 3, "spriteY": 3, "delay": 8 }
-			]
-		},
-		"normal_use_item": {
-			"prop": {"loop": false, "nextAnim": "normal_idle", "playUntilEnd": true},
-			"down": [
-				{ "spriteX": 4, "spriteY": 0, "delay": 3 },
-				{ "spriteX": 4, "spriteY": 1, "delay": 3, "y_offset": 3 },
-				{ "spriteX": 4, "spriteY": 1, "delay": 8 }
-			],
-			"right": [
-				{ "spriteX": 5, "spriteY": 0, "delay": 3 },
-				{ "spriteX": 5, "spriteY": 1, "delay": 3, "x_offset": 3 },
-				{ "spriteX": 5, "spriteY": 1, "delay": 8 }
-			],
-			"up": [
-				{ "spriteX": 6, "spriteY": 0, "delay": 3 },
-				{ "spriteX": 6, "spriteY": 1, "delay": 3, "y_offset": -3 },
-				{ "spriteX": 6, "spriteY": 1, "delay": 8 }
-			],
-			"left": [
-				{ "spriteX": 7, "spriteY": 0, "delay": 3 },
-				{ "spriteX": 7, "spriteY": 1, "delay": 3, "x_offset": -3 },
-				{ "spriteX": 7, "spriteY": 1, "delay": 3 }
-			]
-		},
-		"water_walk": {
-			"prop": {"loop": true},
-			"down": [
-				{ "spriteX": 4, "spriteY": 2, "delay": 8 },
-				{ "spriteX": 4, "spriteY": 3, "delay": 8 }
-			],
-			"right": [
-				{ "spriteX": 5, "spriteY": 2, "delay": 8 },
-				{ "spriteX": 5, "spriteY": 3, "delay": 8 }
-			],
-			"up": [
-				{ "spriteX": 6, "spriteY": 2, "delay": 8 },
-				{ "spriteX": 6, "spriteY": 3, "delay": 8 }
-			],
-			"left": [
-				{ "spriteX": 7, "spriteY": 2, "delay": 8 },
-				{ "spriteX": 7, "spriteY": 3, "delay": 8 }
-			]
-			},
-		"defend_walk": {
-			"prop": {"loop": true},
-			"down": [
-				{ "spriteX": 8, "spriteY": 0, "delay": 8 },
-				{ "spriteX": 8, "spriteY": 1, "delay": 8 }
-			],
-			"right": [
-				{ "spriteX": 9, "spriteY": 0, "delay": 8 },
-				{ "spriteX": 9, "spriteY": 1, "delay": 8 }
-			],
-			"up": [
-				{ "spriteX": 10, "spriteY": 0, "delay": 8 },
-				{ "spriteX": 10, "spriteY": 1, "delay": 8 }
-			],
-			"left": [
-				{ "spriteX": 11, "spriteY": 0, "delay": 8 },
-				{ "spriteX": 11, "spriteY": 1, "delay": 8 }
-			]
-		}
-	}
+  "version": "0.1.9d",
+  "spritesheet": "assets/linksprtest.png",
+  "baseSize": 16,
+  "properties": [
+    "spriteX",
+    "spriteY",
+    "x_offset",
+    "y_offset",
+    "delay",
+    "baseSize",
+    "flipX",
+    "flipY",
+    "scaleXMultiplier",
+    "scaleYMultiplier"
+  ],
+  "animations": {
+    "idle": {
+      "down": [{ "spriteX": 0, "spriteY": 0}],
+      "right": [{ "spriteX": 1, "spriteY": 0 }],
+      "up": [{ "spriteX": 2, "spriteY": 0 }],
+      "left": [{ "spriteX": 3, "spriteY": 0 }]
+    },
+    "idle_shield": {
+      "down": [{ "spriteX": 0, "spriteY": 2 }],
+      "right": [{ "spriteX": 1, "spriteY": 2 }],
+      "up": [{ "spriteX": 2, "spriteY": 2 }],
+      "left": [{ "spriteX": 3, "spriteY": 2 }]
+    },
+    "idle_swim": {
+      "down": [{ "spriteX": 4, "spriteY": 2 }],
+      "right": [{ "spriteX": 5, "spriteY": 2 }],
+      "up": [{ "spriteX": 5, "spriteY": 2 }],
+      "left": [{ "spriteX": 5, "spriteY": 2 }]
+    },
+    "idle_defend": {
+      "down": [{ "spriteX": 8, "spriteY": 0 }],
+      "right": [{ "spriteX": 9, "spriteY": 0 }],
+      "up": [{ "spriteX": 10, "spriteY": 0 }],
+      "left": [{ "spriteX": 11, "spriteY": 0 }]
+    },
+    "walk": {
+      "down": [
+        { "spriteX": 0, "spriteY": 0, "delay": 8 },
+        { "spriteX": 0, "spriteY": 1, "delay": 8 }
+      ],
+      "right": [
+        { "spriteX": 1, "spriteY": 0, "delay": 8 },
+        { "spriteX": 1, "spriteY": 1, "delay": 8 }
+      ],
+      "up": [
+        { "spriteX": 2, "spriteY": 0, "delay": 8 },
+        { "spriteX": 2, "spriteY": 1, "delay": 8 }
+      ],
+      "left": [
+        { "spriteX": 3, "spriteY": 0, "delay": 8 },
+        { "spriteX": 3, "spriteY": 1, "delay": 8 }
+      ]
+    },
+    "walk_shield": {
+      "down": [
+        { "spriteX": 0, "spriteY": 2, "delay": 8 },
+        { "spriteX": 0, "spriteY": 3, "delay": 8 }
+      ],
+      "right": [
+        { "spriteX": 1, "spriteY": 2, "delay": 8 },
+        { "spriteX": 1, "spriteY": 3, "delay": 8 }
+      ],
+      "up": [
+        { "spriteX": 2, "spriteY": 2, "delay": 8 },
+        { "spriteX": 2, "spriteY": 3, "delay": 8 }
+      ],
+      "left": [
+        { "spriteX": 3, "spriteY": 2, "delay": 8 },
+        { "spriteX": 3, "spriteY": 3, "delay": 8 }
+      ]
+    },
+    "use_item": {
+      "down": [
+        { "spriteX": 4, "spriteY": 0, "delay": 3 },
+        { "spriteX": 4, "spriteY": 1, "delay": 3, "y_offset": 3 },
+        { "spriteX": 4, "spriteY": 1, "delay": 8 }
+      ],
+      "right": [
+        { "spriteX": 5, "spriteY": 0, "delay": 3 },
+        { "spriteX": 5, "spriteY": 1, "delay": 3, "x_offset": 3 },
+        { "spriteX": 5, "spriteY": 1, "delay": 8 }
+      ],
+      "up": [
+        { "spriteX": 6, "spriteY": 0, "delay": 3 },
+        { "spriteX": 6, "spriteY": 1, "delay": 3, "y_offset": -3 },
+        { "spriteX": 6, "spriteY": 1, "delay": 8 }
+      ],
+      "left": [
+        { "spriteX": 7, "spriteY": 0, "delay": 3 },
+        { "spriteX": 7, "spriteY": 1, "delay": 3, "x_offset": -3 },
+        { "spriteX": 7, "spriteY": 1, "delay": 3 }
+      ]
+    },
+    "swim": {
+      "down": [
+        { "spriteX": 4, "spriteY": 2, "delay": 8 },
+        { "spriteX": 4, "spriteY": 3, "delay": 8 }
+      ],
+      "right": [
+        { "spriteX": 5, "spriteY": 2, "delay": 8 },
+        { "spriteX": 5, "spriteY": 3, "delay": 8 }
+      ],
+      "up": [
+        { "spriteX": 6, "spriteY": 2, "delay": 8 },
+        { "spriteX": 6, "spriteY": 3, "delay": 8 }
+      ],
+      "left": [
+        { "spriteX": 7, "spriteY": 2, "delay": 8 },
+        { "spriteX": 7, "spriteY": 3, "delay": 8 }
+      ]
+    },
+    "defend": {
+      "down": [
+        { "spriteX": 8, "spriteY": 0, "delay": 8 },
+        { "spriteX": 8, "spriteY": 1, "delay": 8 }
+      ],
+      "right": [
+        { "spriteX": 9, "spriteY": 0, "delay": 8 },
+        { "spriteX": 9, "spriteY": 1, "delay": 8 }
+      ],
+      "up": [
+        { "spriteX": 10, "spriteY": 0, "delay": 8 },
+        { "spriteX": 10, "spriteY": 1, "delay": 8 }
+      ],
+      "left": [
+        { "spriteX": 11, "spriteY": 0, "delay": 8 },
+        { "spriteX": 11, "spriteY": 1, "delay": 8 }
+      ]
+    }
+  }
 }
