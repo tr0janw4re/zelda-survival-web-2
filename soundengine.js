@@ -1,3 +1,5 @@
+//this is what makes the sounds
+
 const soundCtx = new AudioContext();
 
 const freqList = [

@@ -1,3 +1,8 @@
+//For event listeners and state of the keyboard and mouse
+
+import { generateMapImage } from "./world.js";
+import { devMode } from "./main.js";
+
 const keys = {}; //the keys that exist
 const keyPr = {}; //the key is pressed?
 
@@ -80,18 +85,23 @@ export let mouse = {
 };
 
 window.addEventListener("beforeunload", (ev) => {
-  //if (!devMode.on) {
-    //ev.preventDefault();
-  //}
+  if (!devMode.on) {
+    ev.preventDefault();
+  }
 });
 
 document.addEventListener("keydown", function (event) {
   keys[event.key] = true;
   keyPr[event.key] = true;
+  console.log("Jimmy Five");
+  
 });
 
 document.addEventListener("keyup", function (event) {
   keys[event.key] = false;
+  if (event.key == "p") {
+    generateMapImage();
+  }
 });
 
 document.addEventListener("mousemove", function (event) {
